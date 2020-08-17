@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
@@ -36,8 +37,10 @@ public class PatrimonioModel implements Serializable{
 	private int id;
 	@NonNull
 	@Column
+	@NotEmpty(message = "Nome não pode ser vazio")
 	private  String nome;
 	@Column
+	@NotEmpty(message = "Id de marca não pode ser vazio")
 	private long marca_id;
 	@Column
 	private String descricao;
