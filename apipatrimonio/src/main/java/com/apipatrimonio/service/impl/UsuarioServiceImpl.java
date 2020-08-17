@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.apipatrimonio.model.UsuarioModel;
 import com.apipatrimonio.repository.UsuarioRepository;
-import com.apipatrimonio.service.UsuarioSevice;
+import com.apipatrimonio.service.UsuarioService;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioSevice {
+public class UsuarioServiceImpl implements UsuarioService {
 	@Autowired
 	UsuarioRepository usuarioRepository;
 
