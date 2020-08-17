@@ -17,18 +17,27 @@ public class MarcaServiceImpl implements MarcaService {
 	@Autowired
 	MarcaRepository marcaRepository;
 
+	@Override
 	public List<MarcaModel> findAll(){
 		return marcaRepository.findAll();
 	}
 	
+	@Override
 	public MarcaModel save(MarcaModel marca) {
 		marcaRepository.save(marca);
 		return marca;
 		
 	}
 	
+	@Override
 	public Optional<MarcaModel> findById(long id) {
 		return marcaRepository.findById(id);
+	}
+
+	@Override
+	public void deleteById(long id) {
+		marcaRepository.deleteById(id);
+		
 	}
 	
 }

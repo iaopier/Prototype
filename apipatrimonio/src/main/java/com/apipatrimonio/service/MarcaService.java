@@ -12,4 +12,6 @@ public interface MarcaService {
 	MarcaModel save(MarcaModel marca);
 
 	Optional<MarcaModel> findById(long id);
+
+	void deleteById(long id);
 }
