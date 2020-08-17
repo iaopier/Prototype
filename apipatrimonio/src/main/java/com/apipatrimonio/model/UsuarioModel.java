@@ -33,7 +33,7 @@ public class UsuarioModel implements Serializable{
 	@NonNull
 	@Column
 	@NotEmpty(message = "Nome não pode ser vazio")
-	private  String nome;
+	private  String username;
 	@NonNull
 	@Column(unique = true)
 	@NotEmpty(message = "Email não pode ser vazio")
@@ -42,7 +42,7 @@ public class UsuarioModel implements Serializable{
 	@NonNull
 	@Column
 	@NotEmpty(message = "Senha não pode ser vazia")
-	private  String senha;
+	private  String password;
 
 	
 }

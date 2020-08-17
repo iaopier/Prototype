@@ -18,13 +18,10 @@ import com.apipatrimonio.model.PatrimonioModel;
 import com.apipatrimonio.model.UsuarioModel;
 import com.apipatrimonio.service.MarcaService;
 import com.apipatrimonio.service.PatrimonioService;
-import com.apipatrimonio.service.UsuarioService;
 
 @RestController
 @RequestMapping("/api/v1/")
 public class ApiController {
-	@Autowired
-	UsuarioService usuarioService;
 	
 	@Autowired
 	PatrimonioService patrimonioService;
@@ -32,10 +29,7 @@ public class ApiController {
 	@Autowired
 	MarcaService marcaService;
 	
-	@RequestMapping(value = "/usuario", method = RequestMethod.POST)
-	public ResponseEntity<?> usuarioPost(@Valid @RequestBody UsuarioModel usuario) {
-		return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.OK);
-	}
+	
 	
 	@RequestMapping(value = "/patrimonio", method = RequestMethod.GET)
 	public ResponseEntity<?> patrimonioGet() {

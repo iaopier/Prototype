@@ -1,9 +1,13 @@
 package com.apipatrimonio.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.apipatrimonio.model.UsuarioModel;
 
-public interface UsuarioRepository extends JpaRepository<UsuarioModel, Long> {
+@Repository
+public interface UsuarioRepository extends CrudRepository<UsuarioModel, Integer> {
+
+	UsuarioModel findByUsername(String username);
 
 }
