@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,11 +38,11 @@ public class PatrimonioModel implements Serializable{
 	@Column
 	private  String nome;
 	@Column
-	private int marca_id;
+	private long marca_id;
 	@Column
 	private String descricao;
-	@Column(updatable=false)
-	@GeneratedValue
+	@Column(columnDefinition="serial",updatable= false)
+	@Generated(GenerationTime.INSERT)
 	private long numero_tombo;
 	
 	
