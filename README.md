@@ -53,4 +53,30 @@ output: token {xxxx} [Utilizado para acesso aos endpoints]
 
 ### Endpoints de CRUD (Patrimônio e Marca)
 
- 
+#### CRUD Patrimônio
+
+localhost:{xxxx}/api/v1/patrimonio [GET]
+input: vazia
+output: JSON com a lista de patrimônio
+
+localhost:{xxxx}/api/v1/patrimonio [POST]
+input:
+
+```json
+{
+  "nome":"nome",
+  "marca_id":"marca_id",
+  "descricao":"descricao"
+}
+``` 
+localhost:{xxxx}/api/v1/patrimonio/{id} [PUT]
+input: o campo que deseja alterar
+```json
+{
+  "nome":"nome",
+  "marca_id":"marca_id",
+  "descricao":"descricao"
+}
+```
+localhost:{xxxx}/api/v1/patrimonio/{id} [DELETE]
+input: o id do patrimônio que deve ser deletado
