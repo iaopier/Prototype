@@ -1,7 +1,5 @@
 package com.apipatrimonio.controller;
 
-import java.util.Objects;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +39,9 @@ public class JwtAuthenticationController {
 	private JwtUserDetailsService usuarioService;
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
-
-		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+	public ResponseEntity<?> createAuthenticationToken(@Valid @RequestBody JwtRequest authenticationRequest) throws Exception {
+		
+		//authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 
 		final UserDetails userDetails = usuarioService
 				.loadUserByUsername(authenticationRequest.getUsername());
