@@ -1,5 +1,7 @@
 # Prototype
 
+Para execução: mvn clean install && mvn spring-boot:run
+
 Documentação da API para o teste da API de patrimônio da Prototype Ideas. A solução adotada foi criar a API utilizando Spring Boot com Autenticação JWT e PostgreSQL. Dentro do arquivo Scripts estão arquivos de geração de banco de dados e um Docker compose para subir no container docker o PostgreSQL. Para o funcionamento da API deve ser criado um banco de dados chamado "patrimonio_db", existe um script para isso na pasta Scripts. No arquivo application.properties deve ser configurada senha e usuário do banco de dados.
 
 A arquitetura da Aplicação foi utilizada MVC, com as camadas Modelo, Controle e camadas de Serviço para acesso e encapsulamento do Repositório de acesso ao banco de dados.
