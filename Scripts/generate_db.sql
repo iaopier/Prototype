@@ -1,0 +1,1 @@
+CREATE DATABASE patrimonio_db;
